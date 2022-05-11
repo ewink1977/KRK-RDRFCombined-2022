@@ -9,6 +9,11 @@ djangorestframework = "*"
 django-cors-headers = "*"
 python-dotenv = "*"
 autopep8 = "*"
+uuid = "*"
+psycopg2-binary = "*"
+django-rest-knox = "*"
+django-imagekit = "*"
+pillow = "*"
 
 [dev-packages]
 
