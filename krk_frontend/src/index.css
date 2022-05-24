@@ -205,6 +205,14 @@ a:hover {
 	height: 95vh;
 }
 
+.registerLeft {
+	display: flex;
+	background-image: url('https://cdn.douglasavenue.com/krk/media/img/mgronald2.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	height: 95vh;
+}
+
 .loginTestUserBlock {
 	align-self: center;
 	background-color: aliceblue;
