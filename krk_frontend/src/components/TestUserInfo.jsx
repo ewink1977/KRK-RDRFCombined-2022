@@ -30,7 +30,7 @@ function TestUserInfo() {
 				className='testUserText'>
 				You can check out all of the features via the {''}
 				<a
-					href='https://douglasavenue.com/ebbsdoc/documentation.html'
+					href='https://krkboard.com/documentation/'
 					target='_blank'
 					rel='noopener noreferrer'>
 					project's documentation

@@ -72,6 +72,7 @@ function Login() {
 									id='username'
 									label='Username'
 									placeholder='Your @username'
+									helperText="Don't include the @ on your username!"
 									fullWidth
 									margin='normal'
 									InputLabelProps={{ shrink: true }}

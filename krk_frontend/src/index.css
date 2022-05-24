@@ -241,20 +241,20 @@ a:hover {
 	margin-bottom: 1rem;
 }
 
+.loginBlockHeader {
+	text-align: center;
+	font-family: 'Krona One', sans-serif !important;
+	letter-spacing: 0.09rem;
+}
+
 @media only screen and (min-width: 1200px) {
 	.loginBlockHeader {
-		text-align: center;
-		font-family: 'Krona One', sans-serif !important;
 		font-size: 4rem !important;
-		letter-spacing: 0.09rem;
 	}
 }
 @media only screen and (max-width: 1199px) {
 	.loginBlockHeader {
-		text-align: center;
-		font-family: 'Krona One', sans-serif !important;
 		font-size: 2.8rem !important;
-		letter-spacing: 0.09rem;
 	}
 }
 
