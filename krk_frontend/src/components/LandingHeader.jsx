@@ -1,23 +1,25 @@
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
+import { Grid, Button, IconButton } from '@mui/material'
 
 function LandingHeader() {
 	return (
-		<nav>
-			<Navbar bg='light'>
-				<Container>
-					<Navbar.Brand href='/index.html'>
-						<img
-							src='https://cdn.douglasavenue.com/krk/media/img/krk-icon.png'
-							width='80'
-							height='40'
-							className='d-inline-block align-top'
-							alt='KRK Logo'
-						/>
-					</Navbar.Brand>
-				</Container>
-			</Navbar>
-		</nav>
+		<header className='appbar'>
+			<IconButton size='small'>
+				<img
+					src='https://cdn.douglasavenue.com/krk/media/img/krk-icon.png'
+					alt='KRK Logo'
+					className='menuIcon'
+				/>
+			</IconButton>
+
+			<Grid className='menuButton'>
+				<Button href='/register' color='primary'>
+					Register
+				</Button>
+				<Button href='/login' color='secondary'>
+					Login
+				</Button>
+			</Grid>
+		</header>
 	)
 }
 

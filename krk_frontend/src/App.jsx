@@ -3,18 +3,18 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import LandingPage from './pages/Landing'
 import Footer from './components/Footer'
-import Container from 'react-bootstrap/esm/Container'
 
 function App() {
 	return (
-		<Container fluid className='p-0 m-0'>
+		<div className='App'>
 			<Router>
 				<Routes>
-					<Route path='/' element={<LandingPage />} />
+					<Route path='/' element={<LandingPage />} exact />
 				</Routes>
 			</Router>
 			<Footer />
-		</Container>
+			<ToastContainer autoClose={5000} />
+		</div>
 	)
 }
 
