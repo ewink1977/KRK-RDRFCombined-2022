@@ -171,3 +171,133 @@ a:hover {
 	position: absolute;
 	bottom: 0;
 }
+
+/* Test User Box Styling */
+
+.testUserHeader {
+	margin-bottom: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Bowlby One SC', cursive !important;
+}
+
+.testUserText {
+	text-align: justify;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/* Login Page Styling */
+.loginContainer {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 !important;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	border-radius: 15px;
+	min-height: 95vh;
+}
+
+.loginLeft {
+	display: flex;
+	background-image: url('https://cdn.douglasavenue.com/krk/media/img/mgronald1.jpg');
+	background-position: top left;
+	background-repeat: no-repeat;
+	height: 95vh;
+}
+
+.loginTestUserBlock {
+	align-self: center;
+	background-color: aliceblue;
+	opacity: 80%;
+	padding: 1rem;
+	max-width: 100%;
+}
+
+.loginTestUserBlockMob {
+	align-self: center;
+	width: 100%;
+	background-color: aliceblue;
+	padding: 1rem;
+	max-width: 100%;
+	border: 1px solid black;
+}
+
+.loginRight {
+	display: flex;
+	flex-direction: column;
+	min-height: 95vh;
+}
+
+.loginHeaderBlock {
+	padding: 2rem;
+	margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 1200px) {
+	.loginBlockHeader {
+		text-align: center;
+		font-family: 'Krona One', sans-serif !important;
+		font-size: 4rem !important;
+		letter-spacing: 0.09rem;
+	}
+}
+@media only screen and (max-width: 1199px) {
+	.loginBlockHeader {
+		text-align: center;
+		font-family: 'Krona One', sans-serif !important;
+		font-size: 2.8rem !important;
+		letter-spacing: 0.09rem;
+	}
+}
+
+.loginBlockSubhead {
+	font-weight: 400;
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Kanit', sans-serif !important;
+	letter-spacing: 0.23rem;
+	margin-top: 0.25rem;
+	color: grey;
+}
+
+.loginFormBlock {
+	padding: 0.5rem 1rem;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 10px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	margin: 0.5rem !important;
+}
+
+.loginFormHeader {
+	font-weight: '700';
+}
+
+.loginFormWarning {
+	color: darkred;
+	font-weight: 700;
+	text-align: center;
+}
+
+.loginButtonContainer {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.loginButton {
+	margin: 0.5rem !important;
+}
+
+.loginButtonSubmit {
+	margin-left: 0.5rem;
+}
+
+.loginHelper {
+	font-size: 0.8rem;
+	color: blue;
+	margin: 0.5rem 0;
+	text-align: center !important;
+}
