@@ -8,6 +8,7 @@ import {
 	CardActions,
 	Button,
 } from '@mui/material'
+import { Link } from 'react-router-dom'
 import LandingHeader from '../components/LandingHeader'
 
 const LandingPage = () => {
@@ -80,10 +81,15 @@ const LandingPage = () => {
 							</CardContent>
 						</CardActionArea>
 						<CardActions className='cardButtonRow'>
-							<Button href='/login' size='small' color='primary'>
-								LOGIN/REGISTER
-							</Button>
-							<Button size='small' color='primary'>
+							<Link to='/login'>
+								<Button size='small' color='primary'>
+									LOGIN/REGISTER
+								</Button>
+							</Link>
+							<Button
+								href='http://imageone.digital/contact/'
+								size='small'
+								color='success'>
 								CONTACT ERIN
 							</Button>
 						</CardActions>
@@ -125,10 +131,15 @@ const LandingPage = () => {
 							</CardContent>
 						</CardActionArea>
 						<CardActions className='cardButtonRow'>
-							<Button href='/login' size='small' color='primary'>
-								LOGIN/REGISTER
-							</Button>
-							<Button size='small' color='primary'>
+							<Link to='/login'>
+								<Button size='small' color='primary'>
+									LOGIN/REGISTER
+								</Button>
+							</Link>
+							<Button
+								href='http://imageone.digital/contact/'
+								size='small'
+								color='success'>
 								CONTACT ERIN
 							</Button>
 						</CardActions>
@@ -168,10 +179,15 @@ const LandingPage = () => {
 							</CardContent>
 						</CardActionArea>
 						<CardActions className='cardButtonRow'>
-							<Button href='/login' size='small' color='primary'>
-								LOGIN/REGISTER
-							</Button>
-							<Button size='small' color='primary'>
+							<Link to='/login'>
+								<Button size='small' color='primary'>
+									LOGIN/REGISTER
+								</Button>
+							</Link>
+							<Button
+								href='http://imageone.digital/contact/'
+								size='small'
+								color='success'>
 								CONTACT ERIN
 							</Button>
 						</CardActions>
@@ -201,12 +217,16 @@ const LandingPage = () => {
 						'testpassword' (without the quotes).
 					</Typography>
 					<Grid container className='ctaButtonContainer'>
-						<Button href='/login' size='small' color='secondary'>
-							LOGIN
-						</Button>
-						<Button href='/register' size='small' color='secondary'>
-							REGISTER NEW ACCOUNT
-						</Button>
+						<Link to='/login'>
+							<Button size='small' color='primary'>
+								LOGIN
+							</Button>
+						</Link>
+						<Link to='/register'>
+							<Button size='small' color='warning'>
+								REGISTER NEW ACCOUNT
+							</Button>
+						</Link>
 					</Grid>
 				</Grid>
 				<Grid item md={12} lg={5} className='ctaBox'>
@@ -232,11 +252,14 @@ const LandingPage = () => {
 						<Button
 							href='https://github.com/ewink1977'
 							size='small'
-							color='secondary'>
+							color='primary'>
 							MY GITHUB
 						</Button>
-						<Button size='small' color='secondary'>
-							ERIN@DOUGLASAVENUE.COM
+						<Button
+							href='http://imageone.digital/contact/'
+							size='small'
+							color='success'>
+							Contact me!
 						</Button>
 					</Grid>
 				</Grid>
