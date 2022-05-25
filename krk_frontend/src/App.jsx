@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import LandingPage from './pages/Landing'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import BBSMain from './pages/BBSMain'
 import Footer from './components/Footer'
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
 					<Route path='/' element={<LandingPage />} exact />
 					<Route path='/login' element={<Login />} />
 					<Route path='/register' element={<Register />} />
+					{/* Protected Routes go below! */}
+					<Route path='/bbs' element={<BBSMain />} exact />
 				</Routes>
 			</Router>
 			<Footer />

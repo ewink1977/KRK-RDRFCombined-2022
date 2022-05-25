@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import {
-	Container,
-	Grid,
-	Typography,
-	TextField,
-	Button,
-	Hidden,
-} from '@mui/material'
 import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Stack from 'react-bootstrap/Stack'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 function Register() {
 	const [registerData, setRegisterData] = useState({})
@@ -21,165 +19,151 @@ function Register() {
 	}
 
 	return (
-		<Container maxWidth='lg' className='loginContainer'>
-			<Grid
+		<Container fluid='lg' className='loginContainer'>
+			<Row
 				container
 				direction='row'
 				justifyContent='flex-start'
 				alignItems='stretch'>
-				<Hidden smDown>
-					<Grid item md={5} className='registerLeft' />
-				</Hidden>
-				<Grid item md={5} sm={12} className='loginRight'>
-					<Grid
-						item
-						container
-						direction='column'
-						justifyContent='flex-start'
-						alignItems='center'>
-						<Grid item className='loginHeaderBlock'>
-							<Typography
-								variant='h1'
-								className='loginBlockHeader'>
-								MgRONALD'S
-							</Typography>
-							<Typography className='loginBlockSubhead'>
-								Welcome to the Team! We're glad to have you
-								aboard!
-							</Typography>
-						</Grid>
-						<Grid item className='loginFormBlock'>
-							<Typography
-								variant='caption'
-								display='block'
-								gutterBottom
-								className='loginFormWarning'>
+				<Col md={5} className='registerLeft' />
+				<Col md={5} sm={12} className='loginRight'>
+					<Stack>
+						<div className='loginHeaderBlock'>
+							<h1 className='loginBlockHeader'>MgRONALD'S</h1>
+							<div className='loginBlockSubhead'>
+								<small className='text-muted'>
+									Welcome to the Team! We're glad to have you
+									aboard!
+								</small>
+							</div>
+						</div>
+						<div item className='loginFormBlock'>
+							<p className='loginFormWarning'>
 								This system is for MgRonald's employees only!
 								Any unauthorized access is bad, mmkay?
-							</Typography>
-							<Typography
-								variant='h4'
-								className='loginFormHeader'>
+							</p>
+							<h4 className='loginFormHeader'>
 								Sign up for an EBBS account!
-							</Typography>
+							</h4>
 							<hr />
-							<form>
-								<TextField
-									id='username'
-									label='Username*'
-									placeholder='Choose your @username!'
-									helperText='Minimum of 8 characters, letters and numbers only!'
-									fullWidth
-									margin='dense'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={registerData.username}
-									onChange={(e) =>
-										setRegisterData({
-											...registerData,
-											username: e.target.value,
-										})
-									}
-								/>
-								<TextField
-									id='email'
-									label='Email Address*'
-									type='email'
-									fullWidth
-									margin='dense'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={registerData.email}
-									onChange={(e) =>
-										setRegisterData({
-											...registerData,
-											email: e.target.value,
-										})
-									}
-								/>
-								<TextField
-									id='password'
-									label='Password*'
-									type='password'
-									placeholder='Choose a password!'
-									helperText='Password must be at least 8 characters, can’t be too similar to your other personal information, can’t be a commonly used password, and can’t be entirely numeric.'
-									fullWidth
-									margin='dense'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={registerData.password}
-									onChange={(e) =>
-										setRegisterData({
-											...registerData,
-											password: e.target.value,
-										})
-									}
-								/>
-								<TextField
-									id='passwordConfirm'
-									label='Confirm Password*'
-									type='password'
-									placeholder='Confirm that password!'
-									helperText='Enter the same password as before for verification.'
-									fullWidth
-									margin='dense'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={registerData.password2}
-									onChange={(e) =>
-										setRegisterData({
-											...registerData,
-											password2: e.target.value,
-										})
-									}
-								/>
-								<Typography
-									variant='caption'
-									color='error'
-									display='block'>
+							<Form>
+								<Form.Group
+									className='mb-2'
+									controlId='formUserName'>
+									<Form.Label>Username*</Form.Label>
+									<Form.Control
+										id='username'
+										type='text'
+										placeholder='Choose your @username!'
+										value={registerData.username}
+										onChange={(e) =>
+											setRegisterData({
+												...registerData,
+												username: e.target.value,
+											})
+										}
+									/>
+									<Form.Text>
+										Minimum of 8 characters, letters and
+										numbers only!
+									</Form.Text>
+								</Form.Group>
+								<Form.Group
+									className='mb-2'
+									controlId='formEmailAddress'>
+									<Form.Label>Email Address*</Form.Label>
+									<Form.Control
+										id='email'
+										type='email'
+										value={registerData.email}
+										onChange={(e) =>
+											setRegisterData({
+												...registerData,
+												email: e.target.value,
+											})
+										}
+									/>
+								</Form.Group>
+								<Form.Group
+									className='mb-2'
+									controlId='formPassword'>
+									<Form.Label>Password*</Form.Label>
+									<Form.Control
+										id='password1'
+										type='password'
+										placeholder='Choose a password!'
+										value={registerData.password}
+										onChange={(e) =>
+											setRegisterData({
+												...registerData,
+												password: e.target.value,
+											})
+										}
+									/>
+									<Form.Text>
+										Password must be at least 8 characters,
+										cannot be too similar to your other
+										personal information, cannot be a
+										commonly used password, and cannot be
+										entirely numeric.
+									</Form.Text>
+								</Form.Group>
+								<Form.Group
+									className='mb-2'
+									controlId='formConfirmPassword'>
+									<Form.Label>Confirm Password*</Form.Label>
+									<Form.Control
+										id='password2'
+										type='password'
+										placeholder='Confirm that password!'
+										value={registerData.password2}
+										onChange={(e) =>
+											setRegisterData({
+												...registerData,
+												password2: e.target.value,
+											})
+										}
+									/>
+									<Form.Text>
+										Enter the same password as before for
+										verification.
+									</Form.Text>
+								</Form.Group>
+								<small className='text-muted text-danger'>
 									*All fields are <strong>REQUIRED</strong>.
-								</Typography>
-								<Typography
-									variant='caption'
-									color='textSecondary'
-									display='block'>
+								</small>
+								<small className='text-muted text-secondary'>
 									<strong>TEST USERS!</strong> There's no
 									email validation required, so no need to use
 									your real information if you don't want, but
 									it would be cool if you did since I am
 									curious who all is dropping by!
-								</Typography>
-								<Grid
-									container
-									className='loginButtonContainer'>
+								</small>
+								<Row className='loginButtonContainer'>
 									<Button
-										variant='contained'
-										size='medium'
-										color='primary'
+										size='sm'
+										variant='success'
 										onClick={handleSubmit}
 										className='loginButton'>
 										Register
 									</Button>
 									<Button
-										variant='contained'
-										size='medium'
-										color='secondary'
+										variant='secondary'
+										size='sm'
 										onClick={clear}
 										className='loginButton'>
 										Clear Form
 									</Button>
-								</Grid>
-								<Typography
-									align='right'
-									className='loginHelper'>
+								</Row>
+								<p className='loginHelper text-end'>
 									If you already have an account, please{' '}
 									<Link to='/login'>Log In</Link>.
-								</Typography>
-							</form>
-						</Grid>
-					</Grid>
-				</Grid>
-			</Grid>
+								</p>
+							</Form>
+						</div>
+					</Stack>
+				</Col>
+			</Row>
 		</Container>
 	)
 }

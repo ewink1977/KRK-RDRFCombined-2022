@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import {
-	Container,
-	Hidden,
-	Grid,
-	Typography,
-	TextField,
-	Button,
-} from '@mui/material'
 import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Stack from 'react-bootstrap/Stack'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import TestUserInfo from '../components/TestUserInfo'
 
 function Login() {
@@ -22,123 +20,101 @@ function Login() {
 	}
 
 	return (
-		<Container maxWidth='lg' className='loginContainer'>
-			<Grid
-				container
-				direction='row'
-				justifyContent='flex-start'
-				alignItems='stretch'>
-				<Hidden smDown>
-					<Grid item md={5} className='loginLeft'>
-						<Grid item className='loginTestUserBlock'>
-							<TestUserInfo />
-						</Grid>
-					</Grid>
-				</Hidden>
-				<Grid item md={5} sm={12} className='loginRight'>
-					<Grid
-						item
-						container
-						direction='column'
-						justifyContent='flex-start'
-						alignItems='center'>
-						<Grid item className='loginHeaderBlock'>
-							<Typography
-								variant='h1'
-								className='loginBlockHeader'>
-								MgRONALD'S
-							</Typography>
-							<Typography className='loginBlockSubhead'>
+		<Container fluid='lg' className='loginContainer'>
+			<Row className='justify-items-start'>
+				<Col xs={12} md={5} className='loginLeft'>
+					<div className='loginTestUserBlock'>
+						<TestUserInfo />
+					</div>
+				</Col>
+				<Col md={5} sm={12} className='loginRight'>
+					<Stack>
+						<div className='loginHeaderBlock'>
+							<h1 className='loginBlockHeader'>MgRONALD'S</h1>
+							<h3 className='loginBlockSubhead'>
 								Employee Digital Bulletin Board System
-							</Typography>
-						</Grid>
-						<Grid item className='loginFormBlock'>
-							<Typography
-								variant='caption'
-								display='block'
-								gutterBottom
-								className='loginFormWarning'>
+							</h3>
+						</div>
+
+						<div item className='loginFormBlock'>
+							<p className='loginFormWarning'>
 								This system is for MgRonald's employees only!
 								Any unauthorized access is bad, mmkay?
-							</Typography>
-							<Typography
-								variant='h4'
-								className='loginFormHeader'>
+							</p>
+							<h4 variant='h4' className='loginFormHeader'>
 								Employee Login
-							</Typography>
+							</h4>
 							<hr />
-							<form>
-								<TextField
-									id='username'
-									label='Username'
-									placeholder='Your @username'
-									helperText="Don't include the @ on your username!"
-									fullWidth
-									margin='normal'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={loginData.username}
-									onChange={(e) =>
-										setLoginData({
-											...loginData,
-											username: e.target.value,
-										})
-									}
-								/>
-								<TextField
-									id='password'
-									label='Password'
-									type='password'
-									placeholder='Password'
-									helperText='If you forgot your username or password, contact IT or your manager.'
-									fullWidth
-									margin='normal'
-									InputLabelProps={{ shrink: true }}
-									variant='outlined'
-									value={loginData.password}
-									onChange={(e) =>
-										setLoginData({
-											...loginData,
-											password: e.target.value,
-										})
-									}
-								/>
-								<Grid
-									container
-									className='loginButtonContainer'>
+							<Form>
+								<Form.Group
+									className='mb-1'
+									controlId='formBasicUsername'>
+									<Form.Label>Username</Form.Label>
+									<Form.Control
+										type='text'
+										id='username'
+										placeholder='Your @username'
+										aria-describedby='usernameHelpBlock'
+										value={loginData.username}
+										onChange={(e) =>
+											setLoginData({
+												...loginData,
+												username: e.target.value,
+											})
+										}
+									/>
+									<Form.Text id='usernameHelpBlock' muted>
+										Don't include the @ on your username!
+									</Form.Text>
+								</Form.Group>
+								<Form.Group
+									className='mb-1'
+									controlId='formBasicPassword'>
+									<Form.Label>Password</Form.Label>
+									<Form.Control
+										type='password'
+										id='password'
+										placeholder='Password'
+										aria-describedby='passwordHelpBlock'
+										value={loginData.password}
+										onChange={(e) =>
+											setLoginData({
+												...loginData,
+												password: e.target.value,
+											})
+										}
+									/>
+									<Form.Text id='usernameHelpBlock' muted>
+										If you forgot your username or password,
+										contact IT or your manager.
+									</Form.Text>
+								</Form.Group>
+
+								<div container className='loginButtonContainer'>
 									<Button
-										variant='contained'
+										variant='primary'
 										size='medium'
 										onClick={handleSubmit}
 										className='loginButtonSubmit'>
 										Log In
 									</Button>
 									<Button
-										variant='contained'
+										variant='danger'
 										size='medium'
-										color='secondary'
 										onClick={clear}
 										className='loginButton'>
 										Clear
 									</Button>
-								</Grid>
-							</form>
-							<Typography
-								align='right'
-								variant='body1'
-								className='loginHelper'>
+								</div>
+							</Form>
+							<p className='loginHelper text-align-right'>
 								If you do not have an account yet, please{' '}
 								<Link to='/register'>register here</Link>!
-							</Typography>
-							<Hidden mdUp>
-								<Grid item className='loginTestUserBlockMob'>
-									<TestUserInfo />
-								</Grid>
-							</Hidden>
-						</Grid>
-					</Grid>
-				</Grid>
-			</Grid>
+							</p>
+						</div>
+					</Stack>
+				</Col>
+			</Row>
 		</Container>
 	)
 }
