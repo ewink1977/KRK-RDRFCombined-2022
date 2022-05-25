@@ -7,12 +7,12 @@ function BBSMain() {
 	return (
 		<Container fluid className='bbsContainer'>
 			<Row>
-				<Col item xs={12} lg={6} className='bbsLeftColumn'>
+				<Col item xs={12} lg className='bbsLeftColumn'>
 					{/* <StickyPostList /> */}
 					{/* <PostList /> */}
 					<h1>Left Side</h1>
 				</Col>
-				<Col item xs={12} lg={6} className='bbsRightColumn'>
+				<Col item xs={12} lg className='bbsRightColumn'>
 					<BBSUserPanel />
 					{/* <BBSEventSummary /> */}
 					{/* <AddPost /> */}

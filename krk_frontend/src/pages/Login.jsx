@@ -22,12 +22,12 @@ function Login() {
 	return (
 		<Container fluid='lg' className='loginContainer'>
 			<Row className='justify-items-start'>
-				<Col xs={12} md={5} className='loginLeft'>
+				<Col xs={12} lg className='loginLeft'>
 					<div className='loginTestUserBlock'>
 						<TestUserInfo />
 					</div>
 				</Col>
-				<Col md={5} sm={12} className='loginRight'>
+				<Col lg sm={12} className='loginRight'>
 					<Stack>
 						<div className='loginHeaderBlock'>
 							<h1 className='loginBlockHeader'>MgRONALD'S</h1>
@@ -93,14 +93,14 @@ function Login() {
 								<div container className='loginButtonContainer'>
 									<Button
 										variant='primary'
-										size='medium'
+										size='lg'
 										onClick={handleSubmit}
 										className='loginButtonSubmit'>
 										Log In
 									</Button>
 									<Button
 										variant='danger'
-										size='medium'
+										size='lg'
 										onClick={clear}
 										className='loginButton'>
 										Clear

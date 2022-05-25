@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import LandingHeader from '../components/LandingHeader'
+import Stack from 'react-bootstrap/esm/Stack'
 
 const LandingPage = () => {
 	return (
@@ -64,19 +65,22 @@ const LandingPage = () => {
 									test KRK out, or contact me, Erin Winking,
 									to discuss the application further!
 								</Card.Text>
-								<div className='cardButtonRow'>
+								<Stack
+									direction='horizontal'
+									className='cardButtonRow'
+									gap={2}>
 									<Link to='/login'>
-										<Button size='small' color='primary'>
+										<Button size='small' variant='success'>
 											LOGIN/REGISTER
 										</Button>
 									</Link>
 									<Button
 										href='http://imageone.digital/contact/'
 										size='small'
-										color='success'>
+										variant='info'>
 										CONTACT ERIN
 									</Button>
-								</div>
+								</Stack>
 							</Card.Body>
 						</Card>
 					</Col>
@@ -108,19 +112,22 @@ const LandingPage = () => {
 									test KRK out, or contact me, Erin Winking,
 									to discuss the application further!
 								</Card.Text>
-								<div className='cardButtonRow'>
+								<Stack
+									direction='horizontal'
+									className='cardButtonRow'
+									gap={2}>
 									<Link to='/login'>
-										<Button size='small' color='primary'>
+										<Button size='small' variant='success'>
 											LOGIN/REGISTER
 										</Button>
 									</Link>
 									<Button
 										href='http://imageone.digital/contact/'
 										size='small'
-										color='success'>
+										variant='info'>
 										CONTACT ERIN
 									</Button>
-								</div>
+								</Stack>
 							</Card.Body>
 						</Card>
 					</Col>
@@ -151,19 +158,22 @@ const LandingPage = () => {
 									test KRK out, or contact me, Erin Winking,
 									to discuss the application further!
 								</Card.Text>
-								<div className='cardButtonRow'>
+								<Stack
+									direction='horizontal'
+									className='cardButtonRow'
+									gap={2}>
 									<Link to='/login'>
-										<Button size='small' color='primary'>
+										<Button size='small' variant='success'>
 											LOGIN/REGISTER
 										</Button>
 									</Link>
 									<Button
 										href='http://imageone.digital/contact/'
 										size='small'
-										color='success'>
+										variant='info'>
 										CONTACT ERIN
 									</Button>
-								</div>
+								</Stack>
 							</Card.Body>
 						</Card>
 					</Col>
@@ -184,18 +194,21 @@ const LandingPage = () => {
 							'testuser' and the password is 'testpassword'
 							(without the quotes).
 						</p>
-						<div className='ctaButtonContainer'>
+						<Stack
+							direction='horizontal'
+							gap={3}
+							className='ctaButtonContainer'>
 							<Link to='/login'>
-								<Button size='large' color='primary'>
+								<Button size='lg' variant='primary'>
 									LOGIN
 								</Button>
 							</Link>
 							<Link to='/register'>
-								<Button size='large' color='warning'>
+								<Button size='lg' variant='warning'>
 									REGISTER NEW ACCOUNT
 								</Button>
 							</Link>
-						</div>
+						</Stack>
 					</Col>
 
 					<Col md={12} lg={5} className='ctaBox'>
@@ -206,29 +219,31 @@ const LandingPage = () => {
 							hire me as a web developer and have me build it for
 							you! KRK isn't sold as SaaS right now (but who knows
 							what the future might hold). You can look into
-							having me, Erin Winking, as an employee by checking
-							out my profile, GitHub, or emailing me!
+							contracting me, Erin Winking, through my business,
+							Image One Digital, by checking out my profile,
+							GitHub, or contacting me through Image One's
+							website!
 						</p>
-						<div className='ctaButtonContainer'>
+						<Stack
+							direction='horizontal'
+							gap={3}
+							className='ctaButtonContainer'>
 							<Button
 								href='https://douglasavenue.com'
-								size='small'
-								color='secondary'>
+								variant='secondary'>
 								MY PROFILE
 							</Button>
 							<Button
 								href='https://github.com/ewink1977'
-								size='small'
-								color='primary'>
+								variant='primary'>
 								MY GITHUB
 							</Button>
 							<Button
 								href='http://imageone.digital/contact/'
-								size='small'
-								color='success'>
+								variant='success'>
 								Contact me!
 							</Button>
-						</div>
+						</Stack>
 					</Col>
 				</Row>
 			</Container>

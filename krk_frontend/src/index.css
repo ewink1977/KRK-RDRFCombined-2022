@@ -25,13 +25,13 @@ body {
 
 a {
 	text-decoration: none;
-	color: #2c53ff;
+	color: #55544f;
 	font-weight: 500;
 }
 
 a:hover {
 	text-decoration: dotted;
-	color: #617eff;
+	color: #959390;
 }
 
 /* Footer (Universal) */
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .footerText {
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 }
 
 /* Landing Header */
@@ -107,20 +107,20 @@ a:hover {
 .salesContainer {
 	margin-top: 1rem !important;
 	margin-bottom: 1rem;
-	min-height: 500px;
+	min-height: 675px;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 899px) {
 	.salesBox {
 		position: relative;
 		margin: 0 1rem;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 900px) {
 	.salesBox {
 		position: relative;
-		min-height: 475px;
+		min-height: 100%;
 		margin: 0 1rem;
 	}
 }
@@ -129,7 +129,7 @@ a:hover {
 	position: absolute;
 	bottom: 15px;
 	width: 100%;
-	justify-content: space-evenly;
+	justify-content: start;
 }
 
 .salesBoxTitle {
@@ -154,19 +154,17 @@ a:hover {
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 15px;
-	min-height: 300px;
-	padding: 1rem;
+	min-height: 400px;
 }
 .ctaHeader {
-	padding: 1rem;
+	padding-top: 1rem;
 	text-align: center;
 }
 .ctaText {
 	padding: 1.1rem;
 }
 .ctaButtonContainer {
-	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	position: absolute;
 	bottom: 15px;
 }
@@ -201,6 +199,7 @@ a:hover {
 	background-image: url('https://cdn.douglasavenue.com/krk/media/img/mgronald1.jpg');
 	background-position: top left;
 	background-repeat: no-repeat;
+	background-size: cover;
 	height: 95vh;
 }
 
@@ -210,6 +209,12 @@ a:hover {
 	background-position: top left;
 	background-repeat: no-repeat;
 	height: 95vh;
+}
+
+@media only screen and (max-width: 767px) {
+	.registerLeft {
+		display: none;
+	}
 }
 
 .loginTestUserBlock {
@@ -312,10 +317,10 @@ a:hover {
 /* BBS Main Page aka All The Posts and Events! */
 
 .bbsContainer {
-	display: flex;
+	/* display: flex; */
 	flex-wrap: wrap-reverse;
-	justify-content: center;
-	align-items: flex-start;
+	/* justify-content: center; */
+	/* align-items: flex-start; */
 	padding: 0 2rem;
 	min-height: 95vh;
 }
@@ -344,13 +349,14 @@ a:hover {
 	width: 100%;
 }
 .userPanelContainer {
-	margin: 1rem 0.5rem 0.5rem 0.5rem;
+	margin: 1rem 0;
 }
 .userPanelImg {
 	border-radius: 10px;
 	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.45);
 	width: 150px;
 	height: 150px;
+	margin-right: 1rem;
 }
 .userPanelPersonal {
 	display: flex;
@@ -363,7 +369,7 @@ a:hover {
 	font-weight: 800 !important;
 	font-size: 3rem !important;
 	line-height: 1 !important;
-	margin: 1rem 0 !important;
+	margin-bottom: 1rem;
 }
 .userRealName {
 	font-family: 'Kanit', sans-serif !important;
@@ -379,8 +385,5 @@ a:hover {
 	line-height: 1 !important;
 }
 .userOptions {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 	padding: 1rem;
 }

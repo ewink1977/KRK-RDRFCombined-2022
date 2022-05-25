@@ -1,13 +1,14 @@
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
+import Stack from 'react-bootstrap/Stack'
 
 import { Link } from 'react-router-dom'
 
 function LandingHeader() {
 	return (
 		<header className='appbar'>
-			<Navbar bg='dark' fixed='top'>
+			<Navbar bg='primary' fixed='top'>
 				<Container>
 					<Link to='/'>
 						<Navbar.Brand>
@@ -18,12 +19,14 @@ function LandingHeader() {
 							/>
 						</Navbar.Brand>
 					</Link>
-					<Link to='/register'>
-						<Button color='primary'>Register</Button>
-					</Link>
-					<Link to='/login'>
-						<Button color='secondary'>Login</Button>
-					</Link>
+					<Stack direction='horizontal' gap={2}>
+						<Link to='/register'>
+							<Button color='light'>Register</Button>
+						</Link>
+						<Link to='/login'>
+							<Button color='secondary'>Login</Button>
+						</Link>
+					</Stack>
 				</Container>
 			</Navbar>
 		</header>

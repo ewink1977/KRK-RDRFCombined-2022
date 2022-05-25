@@ -25,8 +25,8 @@ function Register() {
 				direction='row'
 				justifyContent='flex-start'
 				alignItems='stretch'>
-				<Col md={5} className='registerLeft' />
-				<Col md={5} sm={12} className='loginRight'>
+				<Col md sm={0} className='registerLeft' />
+				<Col md sm={12} className='loginRight'>
 					<Stack>
 						<div className='loginHeaderBlock'>
 							<h1 className='loginBlockHeader'>MgRONALD'S</h1>
@@ -139,9 +139,9 @@ function Register() {
 									it would be cool if you did since I am
 									curious who all is dropping by!
 								</small>
-								<Row className='loginButtonContainer'>
+								<div className='loginButtonContainer'>
 									<Button
-										size='sm'
+										size='lg'
 										variant='success'
 										onClick={handleSubmit}
 										className='loginButton'>
@@ -149,13 +149,13 @@ function Register() {
 									</Button>
 									<Button
 										variant='secondary'
-										size='sm'
+										size='lg'
 										onClick={clear}
 										className='loginButton'>
 										Clear Form
 									</Button>
-								</Row>
-								<p className='loginHelper text-end'>
+								</div>
+								<p className='loginHelper'>
 									If you already have an account, please{' '}
 									<Link to='/login'>Log In</Link>.
 								</p>

@@ -2,6 +2,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Stack from 'react-bootstrap/Stack'
+import { Link } from 'react-router-dom'
 
 function BBSUserPanel() {
 	const logout = () => {
@@ -19,25 +20,21 @@ function BBSUserPanel() {
 					/>
 				</Col>
 
-				<Col item lg={8} className='userPanelPersonal'>
+				<Col lg={8} className='userPanelPersonal'>
 					<Stack gap={1}>
-						<h2 className='userUserName'>@ewink</h2>
-						<h3 variant='h3' className='userRealName'>
-							Erin Winking
-						</h3>
-						<h5 variant='h5'>Digital Overseer</h5>
+						<Link to='/user/username'>
+							<h2 className='userUserName'>@ewink</h2>
+						</Link>
+						<h3 className='userRealName mb-0'>Erin Winking</h3>
+						<h5>Digital Overseer</h5>
 					</Stack>
 				</Col>
 			</Row>
-			<Row className='userOptions align-items-center justify-content-end'>
-				<Button
-					variant='outlined'
-					color='primary'
-					size='large'
-					onClick={logout}>
+			<div className='userOptions d-flex align-items-center justify-content-end'>
+				<Button variant='outline-primary' size='lg' onClick={logout}>
 					LOGOUT
 				</Button>
-			</Row>
+			</div>
 		</div>
 	)
 }
