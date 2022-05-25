@@ -317,10 +317,7 @@ a:hover {
 /* BBS Main Page aka All The Posts and Events! */
 
 .bbsContainer {
-	/* display: flex; */
 	flex-wrap: wrap-reverse;
-	/* justify-content: center; */
-	/* align-items: flex-start; */
 	padding: 0 2rem;
 	min-height: 95vh;
 }
